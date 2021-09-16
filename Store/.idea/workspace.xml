@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b4a6a331-add9-4f10-8be6-f9bf16bebd2f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/StoreServer/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/.idea/StoreServer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/StoreServer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/src/main/java/beans/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/src/main/java/beans/ProductsManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreServer/src/main/java/server/main/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1yE4X80YrEUgxUdAQp7jURgk19D" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4a6a331-add9-4f10-8be6-f9bf16bebd2f" name="Default Changelist" comment="" />
+      <created>1631803453265</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631803453265</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
