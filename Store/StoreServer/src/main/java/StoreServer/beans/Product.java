@@ -4,7 +4,8 @@ import java.util.Objects;
 
 public class Product {
 
-    public Product() {}
+    public Product() {
+    }
 
     public Product(Product toBeUpdated) {
         this.id = new Integer(toBeUpdated.id);
@@ -58,8 +59,9 @@ public class Product {
         this.requested = requested;
     }
 
-    private  int id;
+    private int id;
     private String name;
     private int quantity;
-    private int requested;
+
+    transient private int requested;
 }

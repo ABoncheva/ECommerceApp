@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0744427-eb53-4fa0-aabf-5d7b59247e67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/AddProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/GetAllInsufficientProductsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/UpdateProductQuantityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StoreServer/server/main/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/StoreServer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/StoreServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StoreServer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StoreClient/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/StoreClient/beans/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/StoreClient/controllers/RestAPIConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StoreClient/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreClient/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StoreClient/src/main/java/StoreClient/client/main/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/StoreClient/client/main/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StoreClient/src/main/java/StoreClient/controller/RestClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreServer/beans/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/beans/ProductsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreServer/beans/ProductsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreServer/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreServer/beans/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreServer/beans/ProductsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreServer/beans/ProductsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/AddProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/AddProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/GetInsufficientProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/GetInsufficientProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/GetProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/GetProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/UpdateProductQuantityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreServer/controllers/UpdateProductQuantityController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +128,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Collection;
 
 @Controller
-public class GetAllProductsController {
-    @RequestMapping(method = RequestMethod.GET, value = "/product/all-products")
+public class GetProductsController {
+    @RequestMapping(method = RequestMethod.GET, value = "/products/all-products")
 
     @ResponseBody
-    public Collection<Product> getAllProducts() {
-        return ProductsManager.getInstance().getAllProducts();
+    public Collection<Product> getProducts() {
+        return ProductsManager.getInstance().getProducts();
     }
 }

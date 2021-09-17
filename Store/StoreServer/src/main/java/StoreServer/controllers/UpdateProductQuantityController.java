@@ -11,12 +11,10 @@ import StoreServer.beans.Product;
 
 @Controller
 class UpdateProductQuantityController {
-
-    @RequestMapping(method = RequestMethod.POST, value="/product/update")
+    @RequestMapping(method = RequestMethod.PUT, value="/products/quantity-update")
 
     @ResponseBody
     public void updateProductQuantity(@RequestBody Product product) {
         ProductsManager.getInstance().updateProductQuantity(product);
     }
-
 }

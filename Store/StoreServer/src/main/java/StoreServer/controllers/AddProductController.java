@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class AddProductController {
-    @RequestMapping(method = RequestMethod.POST, value="/product/add")
+    @RequestMapping(method = RequestMethod.POST, value="/products/add")
 
     @ResponseBody
     public void addProduct(@RequestBody Product product) {
         ProductsManager.getInstance().addProduct(product);
     }
-
 }

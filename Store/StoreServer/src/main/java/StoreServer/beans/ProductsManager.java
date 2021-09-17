@@ -1,6 +1,7 @@
 package StoreServer.beans;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ProductsManager {
 
@@ -15,11 +16,11 @@ public class ProductsManager {
         products.add(product);
     }
 
-    public void updateProductQuantity(Product product) {
+    public synchronized void updateProductQuantity(Product product) {
         for (Product toBeUpdated : products) {
             if (toBeUpdated.equals(product)) {
                 Product toBeAdded = new Product(toBeUpdated);
-                toBeAdded.setQuantity(product.getQuantity());
+                toBeAdded.setQuantity(toBeAdded.getQuantity() + product.getQuantity());
                 products.remove(toBeUpdated);
                 products.add(toBeAdded);
                 break;
@@ -27,31 +28,41 @@ public class ProductsManager {
         }
     }
 
-    public void updateProductRequested(Product product) {
-//        for (Product toBeUpdated : products) {
-//            if (toBeUpdated.equals(product)) {
-//                toBeUpdated.setRequested(product.getRequested());
-//            }
-//        }
+    public synchronized void updateProductRequested(Product product) {
+        for (Product toBeUpdated : products) {
+            if (toBeUpdated.equals(product)) {
+                Product toBeAdded = new Product(toBeUpdated);
+                toBeAdded.setRequested(product.getRequested());
+                products.remove(toBeUpdated);
+                products.add(toBeAdded);
+                break;
+            }
+        }
     }
 
-    public Map<String, Integer> getAllInsufficientProducts() {
+    public synchronized Map<Integer, Integer> getInsufficientProducts() {
 
-        Map<String, Integer> productsAndHowManyNeedToBeAdded = new HashMap<>();
+        Map<Integer, Integer> productsAndHowManyNeedToBeAdded = new HashMap<>();
         products.stream().filter(product -> product.getRequested() > product.getQuantity()).forEach(product -> {
-            productsAndHowManyNeedToBeAdded.put(product.getName(), product.getRequested() - product.getQuantity());
+            productsAndHowManyNeedToBeAdded.put(product.getId(), product.getRequested() - product.getQuantity());
         });
 
         return productsAndHowManyNeedToBeAdded;
     }
 
 
-    public Collection<Product> getAllProducts() {
+    public Collection<Product> getProducts() {
         return products;
     }
 
     private ProductsManager() {
-        products = new HashSet<>();
+        products = ConcurrentHashMap.newKeySet();
+        Product test = new Product();
+        test.setId(1);
+        test.setName("Aleksandrina");
+        test.setQuantity(1);
+        test.setRequested(10);
+        products.add(test);
     }
 
     private Set<Product> products;
