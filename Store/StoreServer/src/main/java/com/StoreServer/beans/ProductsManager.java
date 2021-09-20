@@ -1,10 +1,11 @@
-package com.StoreServer.beans;
+package com.storeserver.beans;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ProductsManager {
 
+    // maybe synchronized ?
     public static ProductsManager getInstance() {
         if (productsManager == null) {
             productsManager = new ProductsManager();

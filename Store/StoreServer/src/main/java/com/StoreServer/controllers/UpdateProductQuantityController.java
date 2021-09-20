@@ -1,7 +1,6 @@
-package com.StoreServer.controllers;
+package com.storeserver.controllers;
 
-import com.StoreServer.beans.ProductsManager;
-import com.StoreServer.beans.Product;
+import com.storeserver.beans.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

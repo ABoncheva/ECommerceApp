@@ -1,12 +1,12 @@
-package com.StoreServer.controllers;
+package com.storeserver.controllers;
 
-import com.StoreServer.beans.Product;
-import com.StoreServer.beans.ProductsManager;
+import com.storeserver.beans.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 
 @Controller
 public class AddProductController {
