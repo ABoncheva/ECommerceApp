@@ -5,6 +5,8 @@ import java.util.Map;
 
 public class Order {
 
+    public Order() {}
+
     public Order(int id, Map<Integer, Integer> orderedProducts) {
         this.id = id;
         this.orderedProductsIdsAndQuantity = orderedProducts;

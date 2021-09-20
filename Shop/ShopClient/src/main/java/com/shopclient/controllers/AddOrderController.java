@@ -1,6 +1,9 @@
 package com.shopclient.controllers;
 
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.shopclient.beans.Order;
+import org.springframework.http.*;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;
 
@@ -17,8 +20,11 @@ public class AddOrderController {
     }
 
     public static void callPostNewOrderAPI(Order order) {
-        //restTemplate.postForObject(POST_NEW_ORDER_API, order, Order.class);
-        restTemplate.put(POST_NEW_ORDER_API, order);
+        MappingJackson2HttpMessageConverter jsonHttpMessageConverter = new MappingJackson2HttpMessageConverter();
+        jsonHttpMessageConverter.getObjectMapper().configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+        restTemplate.getMessageConverters().add(jsonHttpMessageConverter);
+        restTemplate.postForObject(POST_NEW_ORDER_API, order, Order.class);
+
         System.out.println("Order accepted");
     }
 

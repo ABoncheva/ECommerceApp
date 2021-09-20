@@ -24,6 +24,22 @@ public class Order {
         return Objects.hash(id);
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Map<Integer, Integer> getOrderedProductsIdsAndQuanttity() {
+        return orderedProductsIdsAndQuanttity;
+    }
+
+    public void setOrderedProductsIdsAndQuanttity(Map<Integer, Integer> orderedProductsIdsAndQuanttity) {
+        this.orderedProductsIdsAndQuanttity = orderedProductsIdsAndQuanttity;
+    }
+
     private int id;
     private Map<Integer, Integer> orderedProductsIdsAndQuanttity = new HashMap<>();
 }
