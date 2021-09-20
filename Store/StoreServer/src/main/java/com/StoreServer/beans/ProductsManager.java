@@ -1,4 +1,4 @@
-package StoreServer.beans;
+package com.StoreServer.beans;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

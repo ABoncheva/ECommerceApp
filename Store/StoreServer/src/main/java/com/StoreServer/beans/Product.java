@@ -1,4 +1,4 @@
-package StoreServer.beans;
+package com.StoreServer.beans;
 
 import java.util.Objects;
 
@@ -62,6 +62,5 @@ public class Product {
     private int id;
     private String name;
     private int quantity;
-
-    transient private int requested;
+    private int requested;
 }
