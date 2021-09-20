@@ -1,6 +1,6 @@
-package StoreClient.controllers;
+package com.StoreClient.controllers;
 
-import StoreClient.beans.Product;
+import com.StoreClient.beans.Product;
 import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;
@@ -8,13 +8,9 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Arrays;
 
 @Controller
-public class RestAPIConsumer {
+public class ProductsController {
 
-    public static void main(String[] args) {
-        callGetAllProductsAPI();
-        callGetInsufficientProductsAPI();
-    }
-
+    // to be removed
     private static void callGetAllProductsAPI() {
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -25,6 +21,7 @@ public class RestAPIConsumer {
     }
 
 
+    // id and to be updated to be passes as arguments
     private static void callUpdateProductQuantityAPI() {
         Product updateProduct = new Product(1, 10);
         restTemplate.put(UPDATE_PRODUCT_QUANTITY_API, updateProduct);

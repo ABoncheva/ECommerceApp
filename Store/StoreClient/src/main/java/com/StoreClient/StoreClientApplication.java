@@ -1,14 +1,11 @@
-package StoreClient.client.main;
+package com.StoreClient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-
 @SpringBootApplication
-public class Application {
-
+public class StoreClientApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(StoreClientApplication.class, args);
     }
 }
