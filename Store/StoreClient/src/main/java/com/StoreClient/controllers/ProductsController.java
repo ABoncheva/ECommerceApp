@@ -1,4 +1,4 @@
-package com.StoreClient.controllers;
+package com.storeclient.controllers;
 
 import com.StoreClient.beans.Product;
 import org.springframework.http.*;
@@ -21,7 +21,7 @@ public class ProductsController {
     }
 
 
-    // id and to be updated to be passes as arguments
+    // id and to be updated to be passes as arguments, make post request ?
     private static void callUpdateProductQuantityAPI() {
         Product updateProduct = new Product(1, 10);
         restTemplate.put(UPDATE_PRODUCT_QUANTITY_API, updateProduct);
