@@ -13,7 +13,7 @@ public class GetProductsController {
     @RequestMapping(method = RequestMethod.GET, value = "/products/all-products")
 
     @ResponseBody
-    public Collection<Product> getProducts() {
+    public static Collection<Product> getProducts() {
         return ProductsManager.getInstance().getProducts();
     }
 }

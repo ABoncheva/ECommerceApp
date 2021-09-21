@@ -5,8 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ProductsManager {
 
-    // maybe synchronized ?
-    public static ProductsManager getInstance() {
+    public static synchronized ProductsManager getInstance() {
         if (productsManager == null) {
             productsManager = new ProductsManager();
         }
@@ -41,16 +40,30 @@ public class ProductsManager {
         }
     }
 
-    public synchronized Map<Integer, Integer> getInsufficientProducts() {
+    // to be fixed
+    public Map<Integer, Integer> getInsufficientProducts() {
 
         Map<Integer, Integer> productsAndHowManyNeedToBeAdded = new HashMap<>();
-        products.stream().filter(product -> product.getRequested() > product.getQuantity()).forEach(product -> {
-            productsAndHowManyNeedToBeAdded.put(product.getId(), product.getRequested() - product.getQuantity());
-        });
+        synchronized (this) {
+            products.stream().filter(product -> product.getRequested() > product.getQuantity()).forEach(product -> {
+                productsAndHowManyNeedToBeAdded.put(product.getId(), product.getRequested() - product.getQuantity());
+            });
+        }
 
         return productsAndHowManyNeedToBeAdded;
     }
 
+    public Map<Integer, Integer> getProductsQuantity() {
+        Map<Integer, Integer> productsIdAndQuantity = new HashMap<>();
+
+        synchronized (this) {
+            products.parallelStream().forEach(product -> {
+                productsIdAndQuantity.put(product.getId(), product.getQuantity());
+            });
+        }
+
+        return productsIdAndQuantity;
+    }
 
     public Collection<Product> getProducts() {
         return products;
@@ -59,10 +72,11 @@ public class ProductsManager {
     private ProductsManager() {
         products = ConcurrentHashMap.newKeySet();
         Product test = new Product();
-        test.setId(1);
-        test.setName("Aleksandrina");
-        test.setQuantity(1);
-        test.setRequested(10);
+        Product test2 = new Product();
+        test.setId(2);
+        test.setName("Aleksandrina2");
+        test.setQuantity(2);
+        products.add(test2);
         products.add(test);
     }
 

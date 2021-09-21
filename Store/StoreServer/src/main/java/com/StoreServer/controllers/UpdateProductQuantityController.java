@@ -1,7 +1,6 @@
 package com.storeserver.controllers;
 
 import com.storeserver.beans.*;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +12,7 @@ class UpdateProductQuantityController {
     @RequestMapping(method = RequestMethod.PUT, value="/products/quantity-update")
 
     @ResponseBody
-    public void updateProductQuantity(@RequestBody Product product) {
+    public static void updateProductQuantity(@RequestBody Product product) {
         ProductsManager.getInstance().updateProductQuantity(product);
     }
 }

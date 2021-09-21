@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0744427-eb53-4fa0-aabf-5d7b59247e67" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsQuantityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/ShopClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/ShopClientApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/beans/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/beans/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/controllers/AddOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/controllers/AddOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/OrdersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/OrdersManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/controllers/AddNewOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/controllers/AddNewOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/StoreClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/StoreClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/beans/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/controllers/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/controllers/ProductsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/StoreServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/StoreServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/beans/ProductsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/beans/ProductsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/AddProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/AddProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetInsufficientProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetInsufficientProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/UpdateProductQuantityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/UpdateProductQuantityController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,20 +55,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager" selected="Application.Application">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StoreServer.server.main.Application" />
-      <module name="StoreServer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="StoreServer.server.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.StoreServerApplication">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="StoreServer.server.main.Main" />
       <module name="StoreServer" />
@@ -81,6 +82,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StoreServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.storeserver.StoreServerApplication" />
+      <module name="StoreServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StoreServer.server.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in StoreServer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StoreServer" />
       <option name="PACKAGE_NAME" value="" />
@@ -89,9 +103,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.StoreServerApplication" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="JUnit.All in StoreServer" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.StoreServerApplication" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in StoreServer" />
@@ -127,10 +147,15 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/StoreServer/beans/controllers/AddProductController.java</url>
           <line>13</line>
-          <properties class="controllers.AddProductController" method="addProduct">
+          <properties class="controllers.AddProductController">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/storeserver/beans/ProductsManager.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

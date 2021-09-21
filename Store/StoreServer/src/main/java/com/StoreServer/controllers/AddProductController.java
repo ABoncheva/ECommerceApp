@@ -13,7 +13,7 @@ public class AddProductController {
     @RequestMapping(method = RequestMethod.POST, value="/products/add")
 
     @ResponseBody
-    public void addProduct(@RequestBody Product product) {
+    public static void addProduct(@RequestBody Product product) {
         ProductsManager.getInstance().addProduct(product);
     }
 }

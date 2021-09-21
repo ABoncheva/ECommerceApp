@@ -1,7 +1,7 @@
 package com.shopserver.beans;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.LinkedBlockingDeque;
 
 public class OrdersManager {
 
@@ -15,14 +15,12 @@ public class OrdersManager {
     }
 
     public void addOrder(Order newOrder) {
-        ordersAndStatuses.put(newOrder, INCOMPLETED_ORDER_STATUS_CODE);
+        incompletedOrders.add(newOrder);
     }
 
     private OrdersManager() {
     }
 
-    private Map<Order, Integer> ordersAndStatuses = new HashMap<>();
+    private BlockingDeque<Order> incompletedOrders = new LinkedBlockingDeque<>();
     private static OrdersManager ordersManager = null;
-    private static final int INCOMPLETED_ORDER_STATUS_CODE = 0;
-    private static final int COMPLETED_ORDER_STATUS_CODE = 1;
 }

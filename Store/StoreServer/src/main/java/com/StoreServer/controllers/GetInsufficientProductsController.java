@@ -13,7 +13,7 @@ public class GetInsufficientProductsController {
     @RequestMapping(method = RequestMethod.GET, value="/products/insufficient-products")
 
     @ResponseBody
-    public Map<Integer, Integer> getInsufficientProducts() {
+    public static Map<Integer, Integer> getInsufficientProducts() {
          return ProductsManager.getInstance().getInsufficientProducts();
     }
 }

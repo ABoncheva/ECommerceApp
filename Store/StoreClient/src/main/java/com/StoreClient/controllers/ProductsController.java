@@ -1,6 +1,6 @@
 package com.storeclient.controllers;
 
-import com.StoreClient.beans.Product;
+import com.storeclient.beans.Product;
 import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;

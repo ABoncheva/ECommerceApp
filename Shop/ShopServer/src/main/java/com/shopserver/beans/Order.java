@@ -8,7 +8,7 @@ public class Order {
 
     public Order(int id, Map<Integer, Integer> orderedProducts) {
         this.id = id;
-        this.orderedProductsIdsAndQuanttity = orderedProducts;
+        this.orderedProductsIdsAndQuantity = orderedProducts;
     }
 
     @Override
@@ -32,14 +32,14 @@ public class Order {
         this.id = id;
     }
 
-    public Map<Integer, Integer> getOrderedProductsIdsAndQuanttity() {
-        return orderedProductsIdsAndQuanttity;
+    public Map<Integer, Integer> getOrderedProductsIdsAndQuantity() {
+        return orderedProductsIdsAndQuantity;
     }
 
-    public void setOrderedProductsIdsAndQuanttity(Map<Integer, Integer> orderedProductsIdsAndQuanttity) {
-        this.orderedProductsIdsAndQuanttity = orderedProductsIdsAndQuanttity;
+    public void setOrderedProductsIdsAndQuantity(Map<Integer, Integer> orderedProductsIdsAndQuantity) {
+        this.orderedProductsIdsAndQuantity = orderedProductsIdsAndQuantity;
     }
 
     private int id;
-    private Map<Integer, Integer> orderedProductsIdsAndQuanttity = new HashMap<>();
+    private Map<Integer, Integer> orderedProductsIdsAndQuantity = new HashMap<>();
 }

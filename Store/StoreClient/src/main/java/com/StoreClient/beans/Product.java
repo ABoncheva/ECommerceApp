@@ -1,4 +1,4 @@
-package com.StoreClient.beans;
+package com.storeclient.beans;
 
 import java.util.Objects;
 
