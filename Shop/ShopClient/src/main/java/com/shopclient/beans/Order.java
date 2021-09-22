@@ -8,6 +8,22 @@ public class Order {
 
     public Order() {}
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Map<Integer, Integer> getOrderedProductsIdsAndQuantity() {
+        return orderedProductsIdsAndQuantity;
+    }
+
+    public void setOrderedProductsIdsAndQuantity(Map<Integer, Integer> orderedProductsIdsAndQuantity) {
+        this.orderedProductsIdsAndQuantity = orderedProductsIdsAndQuantity;
+    }
+
     public Order(int id, Map<Integer, Integer> orderedProducts) {
         this.id = id;
         this.orderedProductsIdsAndQuantity = orderedProducts;

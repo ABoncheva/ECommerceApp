@@ -11,7 +11,6 @@ public class Product {
         this.id = new Integer(toBeUpdated.id);
         this.name = new String(toBeUpdated.name);
         this.quantity = new Integer(toBeUpdated.quantity);
-        this.requested = new Integer(toBeUpdated.requested);
     }
 
     @Override
@@ -51,16 +50,8 @@ public class Product {
         this.name = name;
     }
 
-    public int getRequested() {
-        return requested;
-    }
-
-    public void setRequested(int requested) {
-        this.requested = requested;
-    }
 
     private int id;
     private String name;
     private int quantity;
-    private int requested;
 }

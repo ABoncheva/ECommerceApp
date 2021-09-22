@@ -1,6 +1,5 @@
 package com.shopserver.beans;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
@@ -41,5 +40,5 @@ public class Order {
     }
 
     private int id;
-    private Map<Integer, Integer> orderedProductsIdsAndQuantity = new HashMap<>();
+    private Map<Integer, Integer> orderedProductsIdsAndQuantity;
 }

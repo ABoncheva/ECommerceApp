@@ -5,25 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0744427-eb53-4fa0-aabf-5d7b59247e67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsQuantityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/ShopClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/ShopClientApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/controllers/GetRequestedProductsQuantityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/beans/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/beans/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/controllers/AddOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/controllers/AddOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/OrdersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/OrdersManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/controllers/AddNewOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/controllers/AddNewOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/StoreClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/StoreClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/beans/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/controllers/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/controllers/ProductsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/StoreServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/StoreServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/beans/ProductsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/beans/ProductsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/AddProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/AddProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetInsufficientProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetInsufficientProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/UpdateProductQuantityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/UpdateProductQuantityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsQuantityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsQuantityController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +38,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1yE4b0wceZLUugp936Az8ANwbzy" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -141,6 +141,9 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -154,7 +157,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/storeserver/beans/ProductsManager.java</url>
-          <line>56</line>
+          <line>59</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

@@ -10,30 +10,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class AddOrderController implements CommandLineRunner {
-
-    @Override
-    public void run(String... args) throws Exception {
-        Map<Integer, Integer> orderedProducts = new HashMap<>();
-        orderedProducts.put(1, 1);
-        callPostNewOrderAPI(new Order(1, orderedProducts));
-    }
+public class AddOrderController {
 
     public static void main(String[] args) {
         Map<Integer, Integer> orderedProducts = new HashMap<>();
         orderedProducts.put(1, 1);
-        callPostNewOrderAPI(new Order(1, orderedProducts));
+        Order order  = new Order(1, orderedProducts);
+        callPostNewOrderAPI(order);
     }
 
     public static void callPostNewOrderAPI(Order order) {
-        jsonHttpMessageConverter.getObjectMapper().configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-        restTemplate.getMessageConverters().add(jsonHttpMessageConverter);
         restTemplate.postForObject(POST_NEW_ORDER_API, order, Order.class);
 
         System.out.println(ORDER_ACCEPTED_MSG);
     }
 
-    private static final String POST_NEW_ORDER_API = "http://localhost:8080/orders/add";
+    private static final String POST_NEW_ORDER_API = "http://localhost:8081/orders/add";
     private static final String ORDER_ACCEPTED_MSG = "Order accepted.";
     private static RestTemplate restTemplate = new RestTemplate();
     private static MappingJackson2HttpMessageConverter jsonHttpMessageConverter = new MappingJackson2HttpMessageConverter();

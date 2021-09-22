@@ -4,11 +4,14 @@ import java.util.Objects;
 
 public class Product {
 
-    public Product(){};
+    public Product() {
+    }
+
+    ;
 
     public Product(int id, int quantityToBeOrdered) {
         this.id = id;
-        this.quantityTobBeOrdered = quantityToBeOrdered;
+        this.quantity = quantityToBeOrdered;
     }
 
     @Override
@@ -33,13 +36,13 @@ public class Product {
     }
 
     public int getQuantityTobBeOrdered() {
-        return quantityTobBeOrdered;
+        return quantity;
     }
 
     public void setQuantityTobBeOrdered(int quantityTobBeOrdered) {
-        this.quantityTobBeOrdered = quantityTobBeOrdered;
+        this.quantity = quantityTobBeOrdered;
     }
 
-    private  int id;
-    private int quantityTobBeOrdered;
+    private int id;
+    private int quantity;
 }

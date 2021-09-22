@@ -14,10 +14,10 @@ import java.util.Map;
 
 @Controller
 class GetProductsQuantityController {
-    @RequestMapping(method = RequestMethod.GET, value="/products/quantity", produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(method = RequestMethod.GET, value = "/products/quantity", produces = MediaType.APPLICATION_JSON_VALUE)
 
-   // @ResponseBody
-    public static ResponseEntity<Map<Integer, Integer>> getProductsQuantity() {
-        return new ResponseEntity<>(ProductsManager.getInstance().getProductsQuantity(), HttpStatus.OK);
+    @ResponseBody
+    public static Map<Integer, Integer> getProductsQuantity() {
+        return ProductsManager.getInstance().getProductsQuantity();
     }
 }
