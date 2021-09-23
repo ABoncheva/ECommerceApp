@@ -10,16 +10,18 @@ import java.util.Arrays;
 @Controller
 public class ProductsController {
 
-    // to be removed
+    public static void main(String[] args) {
+        callUpdateProductQuantityAPI();
+    }
+
     private static void callGetAllProductsAPI() {
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
         ResponseEntity<String> result = restTemplate.exchange(GET_ALL_PRODUCTS_API, HttpMethod.GET, entity, String.class);
-        System.out.println(result);
     }
 
-    // id and to be updated to be passes as arguments, make post request ?
+    // Product to be passed as parameter, hardcoded for the demo
     private static void callUpdateProductQuantityAPI() {
-        Product updateProduct = new Product(1, 10);
+        Product updateProduct = new Product(2, 1);
         restTemplate.put(UPDATE_PRODUCT_QUANTITY_API, updateProduct);
     }
 
@@ -27,13 +29,14 @@ public class ProductsController {
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 
         ResponseEntity<String> result = restTemplate.exchange(GET_INSUFFICIENT_PRODUCTS_API, HttpMethod.GET, entity, String.class);
+        // left here because of the demo
         System.out.println(result);
     }
 
 
-    private static final String GET_ALL_PRODUCTS_API = "http://localhost:8080/products/all-products";
-    private static final String UPDATE_PRODUCT_QUANTITY_API = "http://localhost:8080/products/quantity-update";
-    private static final String GET_INSUFFICIENT_PRODUCTS_API = "http://localhost:8080/products/insufficient-products";
+    private static final String GET_ALL_PRODUCTS_API = "http://storeserver:8080/products/all-products";
+    private static final String UPDATE_PRODUCT_QUANTITY_API = "http://storeserver:8080/products/quantity-update";
+    private static final String GET_INSUFFICIENT_PRODUCTS_API = "http://storeserver:8080/products/insufficient-products";
     private static RestTemplate restTemplate = new RestTemplate();
     private static HttpHeaders headers = new HttpHeaders();
     private static HttpEntity entity = new HttpEntity<String>(headers);

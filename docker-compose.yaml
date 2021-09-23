@@ -1,0 +1,34 @@
+version: "3.2"
+services:
+  activemq:
+    image: rmohr/activemq
+    container_name: 'activemq'
+    ports:
+      - 61616:61616
+      - 8161:8161
+
+  shopserver:
+    container_name: 'shopserver'
+    build:
+      context: ./Shop/ShopServer
+    ports:
+      - 8081:8081
+
+  shopclient:
+    build:
+      context: ./Shop/ShopClient
+    depends_on:
+      - shopserver
+
+  storeserver:
+    container_name: 'storeserver'
+    build:
+      context: ./Store/StoreServer
+    ports:
+      - 8080:8080
+
+  storeclient:
+    build:
+      context: ./Store/StoreClient
+    depends_on:
+     - storeserver

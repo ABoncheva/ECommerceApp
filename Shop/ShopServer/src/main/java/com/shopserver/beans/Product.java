@@ -7,11 +7,9 @@ public class Product {
     public Product() {
     }
 
-    ;
-
-    public Product(int id, int quantityToBeOrdered) {
+    public Product(int id, int quantity) {
         this.id = id;
-        this.quantity = quantityToBeOrdered;
+        this.quantity = quantity;
     }
 
     @Override

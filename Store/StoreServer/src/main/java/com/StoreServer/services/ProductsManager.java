@@ -1,9 +1,11 @@
-package com.storeserver.beans;
+package com.storeserver.services;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.amqp.core.AmqpTemplate;
+import com.storeserver.beans.Product;
+import com.storeserver.producers.ProductsQuantityProducer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -13,13 +15,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class ProductsManager {
-
-    public static synchronized ProductsManager getInstance() {
-        if (productsManager == null) {
-            productsManager = new ProductsManager();
-        }
-        return productsManager;
-    }
 
     public void addProduct(Product product) {
         products.add(product);
@@ -34,25 +29,29 @@ public class ProductsManager {
                 products.add(toBeAdded);
                 break;
             }
-            if (product.getQuantity() > 0) { // if quantity < 0 , that means that somebody ordered this product
-                asyncMsgSender.convertAndSend("product-quantity-increased");
-            }
+        }
+        if (product.getQuantity() > 0) { // if quantity < 0 , that means that somebody ordered this product
+            productsQuantityProducer.publish(productsQuantityProducer.PRODUCT_QUANTITY_INCREASED_NOTIFICATION_MSG);
+            // left here for the demo
+            System.out.println("Product quantity increased");
         }
     }
 
 
-    public Map<Integer, Integer> getInsufficientProducts() throws JsonProcessingException {
+    public Map<Integer, Integer> getInsufficientProducts() {
         Map<Integer, Integer> requestedProducts = getRequestedProducts();
         Map<Integer, Integer> result = new HashMap<>();
-        products.stream().forEach(product -> {
-            int requestedAndInStockDelta = requestedProducts.get(product.getId()) - product.getQuantity();
-            if (requestedProducts.keySet().contains(product) &&
-                    requestedAndInStockDelta > 0) {
-                result.put(product.getId(), requestedAndInStockDelta);
-            } else {
-                result.put(product.getId(), 0);
-            }
-        });
+        synchronized (this) {
+            products.parallelStream().forEach(product -> {
+                int requestedAndInStockDelta = requestedProducts.get(product.getId()) - product.getQuantity();
+                if (requestedProducts.keySet().contains(product) &&
+                        requestedAndInStockDelta > 0) {
+                    result.put(product.getId(), requestedAndInStockDelta);
+                } else {
+                    result.put(product.getId(), 0);
+                }
+            });
+        }
         return result;
     }
 
@@ -72,7 +71,7 @@ public class ProductsManager {
         return products;
     }
 
-    private Map<Integer, Integer> getRequestedProducts() throws JsonProcessingException {
+    private Map<Integer, Integer> getRequestedProducts() {
         RestTemplate restClient = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         HttpEntity entity = new HttpEntity<String>(headers);
@@ -85,22 +84,27 @@ public class ProductsManager {
         };
         ObjectMapper mapper = new ObjectMapper();
 
-        return mapper.readValue(jsonInput, typeRef);
+        try {
+            return mapper.readValue(jsonInput, typeRef);
+        } catch (JsonProcessingException exception) {
+            System.err.println("A problem occurred with parsing ShopServer response");
+        }
+        return null;
     }
 
-    private ProductsManager() {
+    private ProductsManager(@Autowired ProductsQuantityProducer productsQuantityProducer) {
+        this.productsQuantityProducer = productsQuantityProducer;
         products = ConcurrentHashMap.newKeySet();
+
+        // hardcoded for the demo
         Product test = new Product();
-        Product test2 = new Product();
-        test.setId(1);
-        test.setName("Aleksandrina2");
-        test.setQuantity(5);
-        products.add(test2);
+        test.setId(2);
+        test.setName("testProduct");
+        test.setQuantity(2);
         products.add(test);
     }
 
+    private final ProductsQuantityProducer productsQuantityProducer;
     private Set<Product> products;
-    private static ProductsManager productsManager = null;
-    private static final String GET_REQUESTED_PRODUCTS_QUANTITY_API = "http://localhost:8080/products/requested";
-    private AmqpTemplate asyncMsgSender;
+    private static final String GET_REQUESTED_PRODUCTS_QUANTITY_API = "http://shopserver:8081/products/requested";
 }

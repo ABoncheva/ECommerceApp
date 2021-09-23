@@ -5,22 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0744427-eb53-4fa0-aabf-5d7b59247e67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/controllers/GetRequestedProductsQuantityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/beans/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/beans/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Shop/ShopClient/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Shop/ShopServer/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Shop/ShopServer/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/listeners/ProductsIncreaseListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/Store.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StoreClient/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activemq.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/producers/ProductsQuantityProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/services/ProductsManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopClient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopClient/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/beans/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/controllers/AddOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopClient/src/main/java/com/shopclient/controllers/AddOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/OrdersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/OrdersManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/OrdersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/service/OrdersManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/beans/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/controllers/AddNewOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/controllers/AddNewOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/controllers/GetRequestedProductsQuantityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/controllers/GetRequestedProductsQuantityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/java/com/shopserver/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Shop/ShopServer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/beans/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/controllers/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreClient/src/main/java/com/StoreClient/controllers/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/beans/ProductsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/beans/ProductsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/beans/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/beans/ProductsManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/AddProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/AddProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetInsufficientProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetInsufficientProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsQuantityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/GetProductsQuantityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/UpdateProductQuantityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/StoreServer/controllers/UpdateProductQuantityController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +76,12 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="B:\Alchi\ECommerceApp\Store\StoreServer" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.StoreServerApplication">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -155,10 +183,41 @@
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/storeserver/services/ProductsManager.java</url>
+          <line>22</line>
+          <properties class="com.storeserver.services.ProductsManager" method="updateProductQuantity">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/storeserver/controllers/UpdateProductQuantityController.java</url>
+          <line>16</line>
+          <properties class="com.storeserver.controllers.UpdateProductQuantityController" method="updateProductQuantity">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/storeserver/beans/ProductsManager.java</url>
-          <line>59</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/storeserver/services/ProductsManager.java</url>
+          <line>57</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/storeserver/beans/Product.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/storeserver/beans/Product.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/storeserver/services/ProductsManager.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Product {
 
-    public Product(int id, int quantityTobBeAdded) {
+    public Product(int id, int quantity) {
         this.id = id;
-        this.quantityTobBeAdded = quantityTobBeAdded;
+        this.quantity = quantity;
     }
 
     @Override
@@ -22,6 +22,22 @@ public class Product {
         return Objects.hash(id);
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getQuantityTobBeAdded() {
+        return quantity;
+    }
+
+    public void setQuantityTobBeAdded(int quantityTobBeAdded) {
+        this.quantity = quantityTobBeAdded;
+    }
+
     private int id;
-    private int quantityTobBeAdded;
+    private int quantity;
 }

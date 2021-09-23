@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Product {
 
-    public Product(int id, int quantityToBeOrdered) {
+    public Product(int id, int quantity) {
         this.id = id;
-        this.quantityTobBeOrdered = quantityToBeOrdered;
+        this.quantity = quantity;
     }
 
     @Override
@@ -23,5 +23,5 @@ public class Product {
     }
 
     private final int id;
-    private int quantityTobBeOrdered;
+    private int quantity;
 }
