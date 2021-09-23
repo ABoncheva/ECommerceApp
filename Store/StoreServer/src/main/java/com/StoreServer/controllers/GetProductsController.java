@@ -13,7 +13,6 @@ import java.util.Collection;
 @Controller
 @RequiredArgsConstructor
 public class GetProductsController {
-
     @RequestMapping(method = RequestMethod.GET, value = "/products/all-products")
     @ResponseBody
     public Collection<Product> getProducts() {

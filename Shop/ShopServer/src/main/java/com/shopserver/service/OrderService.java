@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.shopserver.beans.Order;
 import com.shopserver.beans.Product;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -41,7 +42,7 @@ public class OrderService {
 
     private Map<Integer, Integer> getStoreProductsQuantity() {
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        ResponseEntity<String> response = restTemplate.exchange(GET_PRODUCTS_QUANTITY_API, HttpMethod.GET, entity, String.class);
+        ResponseEntity<String> response = restTemplate.exchange(host+GET_PRODUCTS_QUANTITY_API, HttpMethod.GET, entity, String.class);
         String jsonInput = response.getBody();
         TypeReference<HashMap<Integer, Integer>> typeRef
                 = new TypeReference<>() {
@@ -57,7 +58,7 @@ public class OrderService {
     }
 
     private void finishOrder(Order order) {
-        order.getOrderedProductsIdsAndQuantity().entrySet().parallelStream().forEach(x -> restTemplate.put(UPDATE_PRODUCTS_QUANTITY_API,
+        order.getOrderedProductsIdsAndQuantity().entrySet().parallelStream().forEach(x -> restTemplate.put(host+UPDATE_PRODUCTS_QUANTITY_API,
                 new Product(x.getKey(), x.getValue() * -1)));
         ordersManager.updateRequestedProductsQuantity(order);
         System.out.println("Order finished");
@@ -67,6 +68,10 @@ public class OrderService {
     private RestTemplate restTemplate = new RestTemplate();
     private HttpHeaders headers = new HttpHeaders();
     private HttpEntity entity = new HttpEntity<String>(headers);
-    private static final String GET_PRODUCTS_QUANTITY_API = "http://storeserver:8080/products/quantity";
-    private static final String UPDATE_PRODUCTS_QUANTITY_API = "http://storeserver:8080/products/quantity-update";
+
+    @Value("${storeserver.host}")
+    private String host;
+
+    private final String GET_PRODUCTS_QUANTITY_API = "/products/quantity";
+    private final String UPDATE_PRODUCTS_QUANTITY_API = "/products/quantity-update";
 }

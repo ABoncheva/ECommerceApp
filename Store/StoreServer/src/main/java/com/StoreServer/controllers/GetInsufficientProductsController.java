@@ -14,10 +14,10 @@ import java.util.Map;
 @Controller
 @RequiredArgsConstructor
 public class GetInsufficientProductsController {
-    @RequestMapping(method = RequestMethod.GET, value="/products/insufficient-products", produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(method = RequestMethod.GET, value = "/products/insufficient-products", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public Map<Integer, Integer> getInsufficientProducts() throws JsonProcessingException {
-         return productsManager.getInsufficientProducts();
+    public Map<Integer, Integer> getInsufficientProducts() {
+        return productsManager.getInsufficientProducts();
     }
 
     private final ProductsManager productsManager;

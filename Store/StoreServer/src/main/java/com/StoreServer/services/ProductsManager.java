@@ -5,15 +5,16 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.storeserver.beans.Product;
 import com.storeserver.producers.ProductsQuantityProducer;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
+@RequiredArgsConstructor
 public class ProductsManager {
 
     public void addProduct(Product product) {
@@ -76,7 +77,7 @@ public class ProductsManager {
         HttpHeaders headers = new HttpHeaders();
         HttpEntity entity = new HttpEntity<String>(headers);
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        ResponseEntity<String> response = restClient.exchange(GET_REQUESTED_PRODUCTS_QUANTITY_API,
+        ResponseEntity<String> response = restClient.exchange(host + GET_REQUESTED_PRODUCTS_QUANTITY_API,
                 HttpMethod.GET, entity, String.class);
         String jsonInput = response.getBody();
         TypeReference<HashMap<Integer, Integer>> typeRef
@@ -92,19 +93,24 @@ public class ProductsManager {
         return null;
     }
 
-    private ProductsManager(@Autowired ProductsQuantityProducer productsQuantityProducer) {
-        this.productsQuantityProducer = productsQuantityProducer;
-        products = ConcurrentHashMap.newKeySet();
-
-        // hardcoded for the demo
-        Product test = new Product();
-        test.setId(2);
-        test.setName("testProduct");
-        test.setQuantity(2);
-        products.add(test);
-    }
+//    private ProductsManager(@Autowired ProductsQuantityProducer productsQuantityProducer, String host) {
+//        this.productsQuantityProducer = productsQuantityProducer;
+//        this.host
+//        products = ConcurrentHashMap.newKeySet();
+//
+//        // hardcoded for the demo
+//        Product test = new Product();
+//        test.setId(2);
+//        test.setName("testProduct");
+//        test.setQuantity(2);
+//        products.add(test);
+//    }
 
     private final ProductsQuantityProducer productsQuantityProducer;
-    private Set<Product> products;
-    private static final String GET_REQUESTED_PRODUCTS_QUANTITY_API = "http://shopserver:8081/products/requested";
+    private Set<Product> products = ConcurrentHashMap.newKeySet();
+
+    @Value("${host}")
+    private String host;
+
+    private String GET_REQUESTED_PRODUCTS_QUANTITY_API = "/products/requested";
 }

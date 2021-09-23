@@ -11,7 +11,7 @@ public class AddOrderController {
 
     public static void main(String[] args) {
         Map<Integer, Integer> orderedProducts = new HashMap<>();
-        orderedProducts.put(2, 3);
+        orderedProducts.put(2, 5);
         Order order  = new Order(1, orderedProducts);
         callPostNewOrderAPI(order);
     }
@@ -22,7 +22,7 @@ public class AddOrderController {
         System.out.println(ORDER_ACCEPTED_MSG);
     }
 
-    private static final String POST_NEW_ORDER_API = "http://shopserver:8081/orders/add";
+    private static final String POST_NEW_ORDER_API = "http://localhost:8081/orders/add";
     private static final String ORDER_ACCEPTED_MSG = "Order accepted.";
     private static RestTemplate restTemplate = new RestTemplate();
 }

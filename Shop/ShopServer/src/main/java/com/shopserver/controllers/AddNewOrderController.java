@@ -11,6 +11,7 @@ import com.shopserver.beans.Order;
 public class AddNewOrderController {
 
     @RequestMapping(method = RequestMethod.POST, value = "/orders/add", consumes = MediaType.APPLICATION_JSON_VALUE)
+
     public void addOrder(@RequestBody Order newOrder) {
         orderService.processOrder(newOrder);
     }

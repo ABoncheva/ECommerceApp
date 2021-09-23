@@ -8,9 +8,8 @@ public class Product {
     }
 
     public Product(Product toBeUpdated) {
-        this.id = new Integer(toBeUpdated.id);
-        this.name = new String(toBeUpdated.name);
-        this.quantity = new Integer(toBeUpdated.quantity);
+        this.id = Integer.valueOf(toBeUpdated.id);
+        this.quantity = Integer.valueOf(toBeUpdated.quantity);
     }
 
     @Override
@@ -42,16 +41,7 @@ public class Product {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 
     private int id;
-    private String name;
     private int quantity;
 }

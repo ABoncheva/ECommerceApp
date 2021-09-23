@@ -30,12 +30,12 @@ public class Product {
         this.id = id;
     }
 
-    public int getQuantityTobBeAdded() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantityTobBeAdded(int quantityTobBeAdded) {
-        this.quantity = quantityTobBeAdded;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     private int id;
